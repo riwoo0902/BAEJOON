@@ -1,0 +1,1 @@
+class Program{static void Main(){string a;while ((a = Console.ReadLine()) != null){Console.WriteLine(a);}}}
