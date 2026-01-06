@@ -8,9 +8,14 @@ class Program
         string input = Console.ReadLine();
 
         BigInteger value = 0;
-        for (int i = 0; i < length; i++) value += (input[i] - 96) * Pow(i);
+        for (int i = 0; i < length; i++)
+        {
+            value += ((input[i] - 96) * Pow(i));
+        }
+        value %= 1234567891;
         Console.WriteLine(value);
     }
+    
 
     static BigInteger Pow(int powValue)
     {
