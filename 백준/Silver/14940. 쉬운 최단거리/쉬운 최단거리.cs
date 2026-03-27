@@ -17,17 +17,13 @@ class Program
             int[] input2 = Array.ConvertAll(sr.ReadLine().Split(" "), int.Parse);
             for (int j = 0; j < input[1]; j++)
             {
-                map.Add(new Vector2(i, j), new Point(input2[j]));
-                if (input2[j] == 2)
+                Vector2 pos = new Vector2(i, j);
+                map.Add(pos, new Point(input2[j]));
+                if (input2[j] != 1)
                 {
-                    map[new Vector2(i, j)].moveCount = 0;
-                    stack.Enqueue(new Vector2(i, j));
-                    hash.Add(new Vector2(i, j));
-                }
-                else if (input2[j] == 0)
-                {
-                    map[new Vector2(i, j)].moveCount = 0;
-                    hash.Add(new Vector2(i, j));
+                    map[pos].moveCount = 0;
+                    hash.Add(pos);
+                    if (input2[j] == 2) stack.Enqueue(pos);
                 }
             }
         }
