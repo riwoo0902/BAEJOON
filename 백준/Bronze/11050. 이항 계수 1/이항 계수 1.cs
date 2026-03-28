@@ -3,7 +3,7 @@ class Program
     static void Main()
     {
         int[] a = Array.ConvertAll(Console.ReadLine().Split(" "), int.Parse);
-        float value1 = 1;
+        int value1 = 1;
         for (int i = 1; i <= a[0]; i++) value1 *= i;
         int value2 = 1;
         for (int i = 1; i <= a[1]; i++) value2 *= i;
