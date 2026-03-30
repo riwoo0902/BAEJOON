@@ -1,1 +1,1 @@
-var sr=new StreamReader(Console.OpenStandardInput());sr.ReadLine();var numbers=sr.ReadLine().Split();Array.Sort(numbers,(x, y)=>string.Compare(y+x,x+y));var result =string.Join("",numbers);Console.WriteLine(result.All(c=>c=='0')?"0":result);
+Console.ReadLine();var numbers=Console.ReadLine().Split();Array.Sort(numbers,(x,y)=>string.Compare(y+x,x+y));var result=string.Join("",numbers); Console.WriteLine(result[0]=='0'?"0":result);
